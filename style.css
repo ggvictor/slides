@@ -1,0 +1,45 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+section .container{
+    display: flex;
+    width: 85%;
+    margin-top: 20px;
+    height: 406px;
+}
+.container .painel{
+    background-size: auto 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.painel.active{
+    flex: 5;
+}
+.painel.active h3{
+    opacity: 1;
+    
+}
+@media(max-width:480px){
+    .personagem_container{
+        width:100vw;
+    }
+    .personagem_container .painel{
+        margin: 2px;
+    }
+    .painel:nth-of-type(4),
+    .painel:nth-of-type(5){
+        display: none;
+    }
+}
